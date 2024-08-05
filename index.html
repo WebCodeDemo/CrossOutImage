@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cross Out Image . com</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+	<link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+    <div class="container">
+        <h1>Cross Out Image . com</h1>
+        
+        <div id="uploadArea" class="upload-area">
+            <label for="imageInput" class="upload-label">
+                Choose an image
+                <input type="file" id="imageInput" accept="image/*">
+            </label>
+        </div>
+
+        <div class="output-area">
+            <img id="output" alt="Processed image" style="display: none;">
+        </div>
+
+        <div class="button-group">
+            <button id="saveButton" class="button primary-button" style="display: none;">SAVE IMAGE</button>
+            <a id="redditLink" class="reddit-link" href="https://www.reddit.com/r/TheRightCantMeme/submit/" target="_blank" style="display: none;">Go To r/TheRightCantMeme</a>
+        </div>
+    </div>
+
+    <canvas id="canvas" style="display: none;"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>
