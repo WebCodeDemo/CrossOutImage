@@ -4,56 +4,90 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background-color: #0f0f1a;
+    color: #ffffff;
 }
 
 #game-container {
     width: 800px;
     height: 600px;
-    border: 2px solid black;
+    border: 2px solid #00ffff;
     position: relative;
     overflow: hidden;
+    background-color: #1a1a2e;
+    box-shadow: 0 0 20px #00ffff;
 }
 
 #player, #item, .enemy, #hide-spot, .bullet {
     position: absolute;
+    transition: all 0.1s ease;
 }
 
 #player {
     width: 30px;
     height: 30px;
-    background-color: blue;
+    background-color: #00ffff;
     border-radius: 50%;
+    box-shadow: 0 0 10px #00ffff;
 }
 
 #item {
     width: 20px;
     height: 20px;
-    background-color: yellow;
+    background-color: #ffff00;
+    box-shadow: 0 0 10px #ffff00;
 }
 
 .enemy {
     width: 30px;
     height: 30px;
-    background-color: red;
+    background-color: #ff00ff;
     border-radius: 50%;
+    box-shadow: 0 0 10px #ff00ff;
 }
 
 #hide-spot {
     width: 50px;
     height: 50px;
-    border: 2px dashed green;
+    border: 2px dashed #00ff00;
+    box-shadow: 0 0 10px #00ff00;
 }
 
 .bullet {
     width: 5px;
     height: 5px;
-    background-color: black;
+    background-color: #ffffff;
     border-radius: 50%;
+    box-shadow: 0 0 5px #ffffff;
 }
 
 #ui {
-    margin-top: 10px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#score {
+    font-size: 24px;
+    color: #00ffff;
+    text-shadow: 0 0 5px #00ffff;
+}
+
+#shield-btn {
+    background-color: #1a1a2e;
+    color: #00ffff;
+    border: 2px solid #00ffff;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#shield-btn:hover {
+    background-color: #00ffff;
+    color: #1a1a2e;
 }
 
 #win-screen {
@@ -61,12 +95,45 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
+    background-color: rgba(26, 26, 46, 0.9);
+    padding: 40px;
     text-align: center;
     border-radius: 10px;
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 20px #00ffff;
+}
+
+#win-screen h1 {
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff;
+}
+
+#restart-btn {
+    background-color: #00ffff;
+    color: #1a1a2e;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+#restart-btn:hover {
+    background-color: #1a1a2e;
+    color: #00ffff;
+    border: 2px solid #00ffff;
 }
 
 .hidden {
     display: none;
+}
+
+/* Add some instructions styling */
+#instructions {
+    color: #ffffff;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    text-shadow: 0 0 5px #ffffff;
 }
